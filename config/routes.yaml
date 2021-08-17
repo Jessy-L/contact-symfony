@@ -1,3 +1,14 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+
+# Route page d'accueil 
+
+accueil:
+   path: /
+   controller: App\Controller\ContactController::index
+
+formulaire:
+   path: /formulaire
+   controller: App\Controller\ContactController::affichageForm
+
+Mail:
+   path: /mail
+   controller: App\Controller\ContactController::envoiMail
