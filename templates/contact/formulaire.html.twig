@@ -1,9 +1,29 @@
 {% extends 'base.html.twig' %}
 
- {% block title %}Formulaire de contact{% endblock %}
+
+{% block title %}Formulaire de contact | Jessy landas{% endblock %}
+
 
 {% block body %}
 
-{{ form(contactFormulaire)}}
+    <a href="/" class="link">Accueil</a>
+
+    <!-- Message mail envoyé -->
+    {% for message in app.flashes('success') %}
+        <div class="alert alert-success">
+            {{ message }}
+        </div>
+    {% endfor %}
+
+    <!-- Message mail non envoyé -->
+    {% for message in app.flashes('error') %}
+        <div class="alert alert-danger">
+            {{ message }}
+        </div>
+    {% endfor %}
+
+
+    <!-- Affichage formulaire -->
+    {{ form(contactFormulaire)}}
 
 {% endblock %}

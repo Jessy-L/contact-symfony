@@ -9,6 +9,8 @@ use Doctrine\Persistence\ObjectManager;
 class DepartementsFixtures extends Fixture
 {
     public function load(ObjectManager $manager)
+
+    /* je crée un tableau avec mes jeux de test */
     {
         $departements_jeux_test =  [
 
@@ -33,6 +35,8 @@ class DepartementsFixtures extends Fixture
             ],
 
         ];
+
+        /* je fais une boucle sur le tableau de jeux de test pour insérer les données dans la BDD */
 
         foreach($departements_jeux_test as $departement){
 

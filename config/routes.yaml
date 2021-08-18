@@ -11,4 +11,4 @@ formulaire:
 
 Mail:
    path: /mail
-   controller: App\Controller\ContactController::envoiMail
+   controller: App\Controller\ContactController::envoiEmail
